@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Mabel</h1>
+    <label for="name">Nombre</label>
+    <input type="text" id="name">
+
+    <label for="lastname">Apellido</label>
+    <input type="text" id="lastname">
+
+    <label for="age">Ingresa tu edad</label>
+    <input type="number" id="age">
+
+    <button onclick="funcionSaludar()" >Saludar!!</button>
+    <h2 id="tituloSaludo" > </h2>
+    <h2 id="tituloEdad"> </h2>
+    <h3 id="miente"> </h3>
+
+
+    <script>
+
+        function funcionSaludar(){
+            
+            let inputNombre = document.getElementById('name');
+            let inputApellido = document.getElementById('lastname');
+            let inputEdad = document.getElementById('age');
+
+            let tituloSaludo = document.getElementById('tituloSaludo')
+            let tituloEdad = document.getElementById('tituloEdad')
+            let miente = document.getElementById('miente')
+
+            let mensajeFinal = `Saludo: Hola mucho gusto ${inputNombre.value} ${inputApellido.value}`
+            let mensajeEdad = `Tu edad es: ${inputEdad.value}`
+            let mensajeMiente = "shaa está mintiendo"
+            
+            //literal string
+            // let mensajeFinal = ""
+            // let mensajeFinal = 'Saludo: Hola mucho gusto ' + inputNombre.value + ' ' + inputApellido.value;
+
+            tituloSaludo.innerHTML =  mensajeFinal
+            
+             if (inputEdad.value<25) {
+                miente.innerHTML = mensajeMiente
+                tituloEdad.innerHTML = ''
+             }
+             else{
+                tituloEdad.innerHTML = mensajeEdad
+                miente.innerHTML = ''
+             }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <title>Contador JS</title>
+</head>
+<body>
+    <div>
+        <h2>Deseas incluir números negativos?</h2>
+        <input type="radio" id="Si" name="selection" onclick="handleClick(this)" value="SI">
+        <label for="Si">Si</label>
+
+        <input type="radio" id="No" name="selection" checked onclick="handleClick(this)" value="NO">
+        <label for="No">No</label>
+    </div>
+
+    <div class="center container">
+        <h3>Contador JS</h3>
+        <div>
+            <h3 class="num" id="counter-label">0</h3>
+        </div>
+        <div>
+            <button id="btnDisabled" class="btn" onclick="decreaseCounter()">Disminuir</button>
+            <button class="btn" onclick="resetCounter()">Reiniciar</button>
+            <button class="btn" onclick="incrementClick()">Aumentar</button>
+        </div>
+    </div>
+
+<script src="main.js"></script>
+    
+</body>
+</html>

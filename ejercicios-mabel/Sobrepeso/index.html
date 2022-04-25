@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <title>Sobrepeso</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="sub-container">
+                <div>
+                    <label for="nombre">Ingresa aquí tu nombre:</label>
+                    <input class="inputText" type="text" id="nombre" name="nombre">
+                </div>
+                <div>
+                    <label for="estatura">Ingresa tu estatura (cm):</label>
+                    <input class="inputText" type="number" id="estatura" name="estatura">
+                </div>
+                
+                <div>
+                    <label for="peso">Ingresa tu peso (kg):</label>
+                    <input class="inputText" type="number" id="peso" name="peso">
+                </div>
+                <div class="btn-container">
+                    <button type="button" class="btn" onclick="calculateBtn()" id="calcBtn">Calcular</button>
+                    <button type="button" class="btn" onclick="resetBtn()" id="resetBtn">Limpiar</button>
+                </div>
+            </div>
+            
+            <div class="image" id="image"> 
+    
+            </div>
+            <div class="text1">
+                <h3 id="text"> </h3>
+            </div>
+    
+            <div class="text2">
+                <h3 id="IMC"> </h3>
+            </div>
+            
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+</body>
+</html>
